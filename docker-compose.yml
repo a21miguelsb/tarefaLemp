@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nginx:
+    build: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./prestashop:/app/prestashop
+      - ./wordpress:/app/wordpress
+      - ./drupal:/app/drupal
+
+
+      - ./nginx/prestashop.conf:/etc/nginx/conf.d/prestashop.conf
